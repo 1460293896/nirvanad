@@ -149,18 +149,65 @@ Nirvanad (and utilities) should now be installed in
 to your system path during Go installation, you are encouraged to do
 so now.
 
+
 ### Getting Started
 
 Nirvanad has several configuration options available to tweak how it
 runs, but all of the basic operations work with zero configuration.
 
+- Add the following line to the end of the file:
+
 ```bash
-nirvanad
+ export PATH=$PATH:$(go env GOPATH)/bin
 ```
+
+## Getting Started
+
+Nirvanad has several configuration options available to tweak how it runs, but all
+of the basic operations work with zero configuration.
+
+## Creating a wallet
+
+- To create a wallet, you need to run nirvanad with utxoindex
+
+```bash
+$ nirvanad --utxoindex
+```
+- Open another terminal
+
+```bash
+$ nirvanawallet create
+```
+
+- You will be asked to choose a password for the wallet (a password must be at least 8 characters long, and it won't be shown on the screen you as you entering it). After that you should run this command in order to start the wallet daemon:
+
+```bash
+$ nirvanawallet start-daemon
+```
+- Do not close the first 2 terminals and open a new terminal and then run this in order to request an address from the wallet:
+
+```bash
+$ nirvanawallet new-address
+```
+
+- Your screen will show you something like this:
+
+The wallet address is:
+nirvana:qpff4xzlzfqertcuvztp0r8qlk59sd6y2asamplepm7nmryckumfy07nhwfur
+
+- To see your secret seed phrase :
+
+```bash
+$ nirvanawallet dump-unencrypted-data
+```
+
+Note: Every time you ask nirvanawallet for an address you will get a different address. This is perfectly fine. Every secret key is associated with many different public addresses and there is no reason not to use a fresh one for each transaction.
+
+At this point your can close the wallet daemon, though you should keep it running of you want to be able to check your balance and make transactions
 
 ## Discord
 
-Join our discord server using the following link: [https://discord.gg/ZPZRvgMJDT](https://discord.gg/ZPZRvgMJDT)
+Join our discord server using the following link: [https://discord.gg/](https://discord.gg/)
 
 ## Issue Tracker
 

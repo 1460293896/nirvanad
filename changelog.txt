@@ -1,0 +1,15 @@
+Nirvanad v1.1.0 - 2023-12-25
+============================
+
+* Max coin supply fixes
+* Docker configs
+* Rename text string kaspa to nirvana in nirvanawallet
+* Genesis hash for setup testnet, simnet & devnet for nirvana
+* Batch upstream merge including critical RPC bug
+* Additional DNS seeders and enabled testnet, simnet and devnet
+* GitHub workflow for automatic and deterministic builds
+
+Nirvanad v1.0.0 - 2023-11-15
+============================
+
+* First version

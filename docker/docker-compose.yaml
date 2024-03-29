@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+  nirvanad:
+    container_name: nirvanad
+    image: nirvananetwork/nirvanad:latest
+    restart: unless-stopped
+    ports:
+      - "22110:22110/tcp"
+      - "22111:22111/tcp"
+    volumes:
+      - $HOME/.nirvanad:/app/data/
+# use managed volumes
+#      - nirvanad:/app/data/
+    command:  ./nirvanad --utxoindex --connect=mainnet-dnsseed-1.nirvanacoin.com --appdir=/app/data

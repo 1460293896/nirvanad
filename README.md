@@ -161,11 +161,6 @@ runs, but all of the basic operations work with zero configuration.
  export PATH=$PATH:$(go env GOPATH)/bin
 ```
 
-## Getting Started
-
-Nirvanad has several configuration options available to tweak how it runs, but all
-of the basic operations work with zero configuration.
-
 ## Creating a wallet
 
 - To create a wallet, you need to run nirvanad with utxoindex
